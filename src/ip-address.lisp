@@ -20,7 +20,8 @@
 
 ;;; IP Address Types
 
-(defstruct (ip-address (:constructor nil))
+(defstruct (ip-address (:constructor nil)
+                        (:predicate nil))  ; We define our own ip-address-p
   "Base type for IP addresses."
   (bytes #() :type (simple-array (unsigned-byte 8) (*))))
 
